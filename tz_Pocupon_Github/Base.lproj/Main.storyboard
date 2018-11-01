@@ -342,7 +342,7 @@
                         <viewLayoutGuide key="safeArea" id="OUd-f1-ace"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="Xnx-Ks-cf9">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="TTu-ZI-oAl">
+                        <barButtonItem key="rightBarButtonItem" id="TTu-ZI-oAl">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="M60-tq-2YO">
                                 <rect key="frame" x="264" y="0.0" width="40" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
