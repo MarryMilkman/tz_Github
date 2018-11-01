@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		443D06EDE5F5E36141505565 /* Pods_tz_Pocupon_Github.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 798239EF4AEC815C2543E66A /* Pods_tz_Pocupon_Github.framework */; };
+		6D46CFF1218B2D8600ED347A /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D46CFF0218B2D8600ED347A /* CollectionViewController.swift */; };
 		6D4AEE9F218850F50078BD34 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4AEE9E218850F50078BD34 /* ViewController.swift */; };
 		6D4AEEA2218850F50078BD34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D4AEEA0218850F50078BD34 /* Main.storyboard */; };
 		6D4AEEA5218850F50078BD34 /* tz_Pocupon_Github.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6D4AEEA3218850F50078BD34 /* tz_Pocupon_Github.xcdatamodeld */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		3607E86DE8E49BF2F510BC9F /* Pods-tz_Pocupon_Github.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tz_Pocupon_Github.debug.xcconfig"; path = "Pods/Target Support Files/Pods-tz_Pocupon_Github/Pods-tz_Pocupon_Github.debug.xcconfig"; sourceTree = "<group>"; };
+		6D46CFF0218B2D8600ED347A /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		6D4AEE99218850F50078BD34 /* tz_Pocupon_Github.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tz_Pocupon_Github.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D4AEE9E218850F50078BD34 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6D4AEEA1218850F50078BD34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 		6D4AEEB92188808B0078BD34 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				6D46CFF0218B2D8600ED347A /* CollectionViewController.swift */,
 				6D4AEEDC2188E0650078BD34 /* RepositoryViewController.swift */,
 				6DFDBCFE218A29AC003C9219 /* FavoriteVC.swift */,
 				6D4AEE9E218850F50078BD34 /* ViewController.swift */,
@@ -267,6 +270,7 @@
 				6D4AEEA5218850F50078BD34 /* tz_Pocupon_Github.xcdatamodeld in Sources */,
 				6D4AEED42188D99F0078BD34 /* AppDelegate.swift in Sources */,
 				6D4AEEBA218880910078BD34 /* ShowCollectionViewCell.swift in Sources */,
+				6D46CFF1218B2D8600ED347A /* CollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

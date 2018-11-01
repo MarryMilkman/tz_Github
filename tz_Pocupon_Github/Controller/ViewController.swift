@@ -45,10 +45,10 @@ class ViewController: UIViewController {
                 print(error)
                 return
             }
-            print(response.response ?? "error")
             
             if let data = response.result.value as AnyObject? {
                 self.repoArr = self.parsData(data)
+                if (self.repoArr.count == 0) { self.doAlert("The user’s repository is empty or there is no such user.")}
                 self.checkFavoriteItData()
             }
             self.collectView.reloadData()
@@ -103,6 +103,15 @@ class ViewController: UIViewController {
         }
     }
     
+    // Alert
+    
+    func doAlert(_ errorMessage: String) {
+        let alert = UIAlertController(title: "Something wrong", message: errorMessage, preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "ok", style: .default, handler: nil))
+        self.present(alert, animated: true)
+    }
+    
     // Segue prepare
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -117,22 +126,39 @@ class ViewController: UIViewController {
 
 extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        let sectionInArr = repoArr.count
+        if (UIDevice.current.orientation.isLandscape) {
+            return (sectionInArr / 2 + sectionInArr % 2)
+        }
+        return (sectionInArr)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return repoArr.count
+        let sectionInArr = repoArr.count
+        if (UIDevice.current.orientation.isLandscape) {
+            if (section == (sectionInArr / 2 + sectionInArr % 2 - 1) && (sectionInArr % 2) != 0) {
+                return 1
+            }
+            return 2
+        }
+        return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "showViewCell", for: indexPath) as? ShowCollectionViewCell {
-            cell.nameRepoLabel.text = repoArr[indexPath.row].name
-            cell.nameUserLabel.text = repoArr[indexPath.row].owner_name
-            cell.dateCreateLabel.text = repoArr[indexPath.row].create_at
-            cell.starsLabel.text = String(repoArr[indexPath.row].stargazers_count)
-            cell.languageLabel.text = repoArr[indexPath.row].languege
+            let n = UIDevice.current.orientation.isLandscape ? 2 : 1
+            let index = indexPath.row + n * indexPath.section
+            cell.nameRepoLabel.text = repoArr[index].name
+            cell.nameUserLabel.text = repoArr[index].owner_name
+            cell.starsLabel.text = String(repoArr[index].stargazers_count)
+            let language = repoArr[index].languege
+            cell.languageLabel.text = language == nil ? "Unknown language" : language
             
             let button = cell.addFavoriteButton!
-            repoArr[indexPath.row].isFavoryte ? button.setTitleColor(UIColor.yellow, for: button.state) : button.setTitleColor(UIColor.gray, for: button.state)
+            repoArr[index].isFavoryte ? button.setTitleColor(UIColor.yellow, for: button.state) : button.setTitleColor(UIColor.gray, for: button.state)
                                 
-            cell.addFavoriteButton.tag = indexPath.row
+            cell.addFavoriteButton.tag = index
             let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.tapGestureAction))
             cell.addFavoriteButton.addGestureRecognizer(tapRecognizer)
             
@@ -142,7 +168,9 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "segueFromVCToRepository", sender: repoArr[indexPath.row])
+        let n = UIDevice.current.orientation.isLandscape ? 2 : 1
+        let index = indexPath.row + n * indexPath.section
+        performSegue(withIdentifier: "segueFromVCToRepository", sender: repoArr[index])
     }
 }
 
@@ -185,3 +213,11 @@ extension ViewController {
     }
 }
 
+// MARK: - Tratsition
+
+extension ViewController {
+    override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
+        collectView.reloadData()
+    }
+    
+}

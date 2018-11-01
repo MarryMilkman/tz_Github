@@ -15,9 +15,7 @@ class ShowCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var nameRepoLabel: UILabel!
     @IBOutlet weak var nameUserLabel: UILabel!
-    @IBOutlet weak var dateCreateLabel: UILabel!
     @IBOutlet weak var starsLabel: UILabel!
     @IBOutlet weak var languageLabel: UILabel!
-    @IBOutlet weak var loadIndicator: UIActivityIndicatorView!
     
 }

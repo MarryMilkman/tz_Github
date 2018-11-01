@@ -11,7 +11,7 @@ import CoreData
 
 class FavoriteVC: UIViewController {
     
-    @IBOutlet weak var celectionView: UICollectionView!
+    @IBOutlet weak var collectionView: UICollectionView!
     var fetchResultController: NSFetchedResultsController<NSFetchRequestResult>!
     let globalContext: NSManagedObjectContext = PersistentService.context
     
@@ -33,7 +33,7 @@ class FavoriteVC: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        celectionView.reloadData()
+        collectionView.reloadData()
     }
     
     // Segue prepare
@@ -52,16 +52,32 @@ class FavoriteVC: UIViewController {
 
 extension FavoriteVC: UICollectionViewDelegate, UICollectionViewDataSource {
     
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        guard let sections = fetchResultController.fetchedObjects else { return 0 }
+        if (UIDevice.current.orientation.isLandscape) {
+            return (sections.count / 2 + sections.count % 2)
+        }
+        return (sections.count)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        guard let sections = fetchResultController.sections else { return 0 }
-        return sections[section].numberOfObjects
+        guard let sections = fetchResultController.fetchedObjects else { return 0 }
+        if (UIDevice.current.orientation.isLandscape) {
+            if (section == (sections.count / 2 + sections.count % 2 - 1) && (sections.count % 2) != 0) {
+                return 1
+            }
+            return 2
+        }
+        return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "showViewCell", for: indexPath) as? ShowCollectionViewCell {
-            let repo = self.fetchResultController.object(at: indexPath) as! Repo
+            let n = UIDevice.current.orientation.isLandscape ? 2 : 1
+            let curentIndexPath = IndexPath(item: indexPath.row + n * indexPath.section, section: 0)
+            let repo = self.fetchResultController.object(at: curentIndexPath) as! Repo
             configureCell(cell, repo)
-            cell.addFavoriteButton.tag = indexPath.row
+            cell.addFavoriteButton.tag = indexPath.row + n * indexPath.section
             
             let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(FavoriteVC.tapGestureAction))
             cell.addFavoriteButton.addGestureRecognizer(tapRecognizer)
@@ -71,7 +87,9 @@ extension FavoriteVC: UICollectionViewDelegate, UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "segueFromFavoriteToRepository", sender: self.fetchResultController.object(at: indexPath) as! Repo)
+        let n = UIDevice.current.orientation.isLandscape ? 2 : 1
+        let curentIndexPath = IndexPath(item: indexPath.row + n * indexPath.section, section: 0)
+        performSegue(withIdentifier: "segueFromFavoriteToRepository", sender: self.fetchResultController.object(at: curentIndexPath) as! Repo)
     }
     
     // Configure Cell
@@ -79,9 +97,9 @@ extension FavoriteVC: UICollectionViewDelegate, UICollectionViewDataSource {
     func configureCell(_ cell: ShowCollectionViewCell, _ repo: Repo) {
         cell.nameRepoLabel.text = repo.name
         cell.nameUserLabel.text = repo.owner_name
-        cell.dateCreateLabel.text = repo.create_at
         cell.starsLabel.text = String(repo.stargazers_count)
-        cell.languageLabel.text = repo.languege
+        let language = repo.languege
+        cell.languageLabel.text = language == nil ? "Unknown language" : language
         
         let button = cell.addFavoriteButton!
         button.setTitleColor(UIColor.yellow, for: button.state)
@@ -98,7 +116,7 @@ extension FavoriteVC {
         let repoArr = self.fetchResultController.sections![0].objects as! [Repo]
         let repo = repoArr[index]
         if (Repo.checkAndDel_ifStory(repo, flagDel: true, context: globalContext)) {
-            self.celectionView.reloadData()
+            self.collectionView.reloadData()
         }
     }
 }
@@ -108,7 +126,15 @@ extension FavoriteVC {
 extension FavoriteVC: NSFetchedResultsControllerDelegate {
 
     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
-        print("ZALUPA!!!!!!!!!!!!!")
+
+    }
+}
+
+// MARK: - Tratsition
+
+extension FavoriteVC {
+    override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
+        collectionView.reloadData()
     }
 
 }

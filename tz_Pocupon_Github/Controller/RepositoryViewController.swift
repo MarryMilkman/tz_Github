@@ -15,6 +15,7 @@ class RepositoryViewController: UIViewController {
     var favoriteContext: NSManagedObjectContext?
     
 
+    @IBOutlet weak var loudingIndicator: UIActivityIndicatorView!
     @IBOutlet weak var favoriteButton: UIButton!
     @IBOutlet weak var owner_nameLabel: UILabel!
     @IBOutlet weak var owner_urlLabel: UILabel!
@@ -29,14 +30,16 @@ class RepositoryViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        loudingIndicator.isHidden = false
         titleRepo.title = customRepo.name
         owner_nameLabel.text = customRepo.owner_name
         owner_urlLabel.text = customRepo.owner_url
-        starsLabel.text = String(describing: (customRepo.stargazers_count))
-        languageLabel.text = customRepo.languege
-        create_atLAbel.text = customRepo.create_at
-        url_gitLabel.text = customRepo.git_url
-        url_repoLabel.text = customRepo.clone_url
+        starsLabel.text! += String(describing: (customRepo.stargazers_count))
+        let language = customRepo.languege == nil ? "unknown" : customRepo.languege!
+        languageLabel.text! += language
+        create_atLAbel.text! += customRepo.create_at
+        url_gitLabel.text! += customRepo.git_url
+        url_repoLabel.text! += customRepo.clone_url
         
         let color = customRepo.isFavoryte ? UIColor.yellow : UIColor.gray
         favoriteButton.setTitleColor(color, for: favoriteButton.state)
@@ -79,9 +82,9 @@ class RepositoryViewController: UIViewController {
 
     
     func get_image(_ url_str: String, _ imageView: UIImageView){
-        print("::", url_str)
         guard let url: URL = URL(string: url_str) else {
-            print("Something wrong whith url")
+            print("Something wrong with url")
+            loudingIndicator.isHidden = true
             return
         }
         let session = URLSession.shared
@@ -94,6 +97,7 @@ class RepositoryViewController: UIViewController {
                         imageView.image = image
                     }
                 }
+                self.loudingIndicator.isHidden = true
             })
         })
         task.resume()
