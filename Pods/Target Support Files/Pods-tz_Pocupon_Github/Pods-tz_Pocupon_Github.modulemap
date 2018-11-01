@@ -1,0 +1,6 @@
+framework module Pods_tz_Pocupon_Github {
+  umbrella header "Pods-tz_Pocupon_Github-umbrella.h"
+
+  export *
+  module * { export * }
+}

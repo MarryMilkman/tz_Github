@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="17E199" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Repo" representedClassName="Repo" syncable="YES">
+        <attribute name="clone_url" attributeType="String" syncable="YES"/>
+        <attribute name="create_at" attributeType="String" syncable="YES"/>
+        <attribute name="full_name" attributeType="String" syncable="YES"/>
+        <attribute name="git_url" attributeType="String" syncable="YES"/>
+        <attribute name="html_url" attributeType="String" syncable="YES"/>
+        <attribute name="languege" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <attribute name="owner_avatar" attributeType="String" syncable="YES"/>
+        <attribute name="owner_name" attributeType="String" syncable="YES"/>
+        <attribute name="owner_url" attributeType="String" syncable="YES"/>
+        <attribute name="stargazers_count" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Repo" positionX="-63" positionY="-18" width="128" height="210"/>
+    </elements>
+</model>

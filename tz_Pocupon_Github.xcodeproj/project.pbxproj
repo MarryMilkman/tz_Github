@@ -1,0 +1,469 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		443D06EDE5F5E36141505565 /* Pods_tz_Pocupon_Github.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 798239EF4AEC815C2543E66A /* Pods_tz_Pocupon_Github.framework */; };
+		6D4AEE9F218850F50078BD34 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4AEE9E218850F50078BD34 /* ViewController.swift */; };
+		6D4AEEA2218850F50078BD34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D4AEEA0218850F50078BD34 /* Main.storyboard */; };
+		6D4AEEA5218850F50078BD34 /* tz_Pocupon_Github.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6D4AEEA3218850F50078BD34 /* tz_Pocupon_Github.xcdatamodeld */; };
+		6D4AEEA7218850F50078BD34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D4AEEA6218850F50078BD34 /* Assets.xcassets */; };
+		6D4AEEAA218850F50078BD34 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D4AEEA8218850F50078BD34 /* LaunchScreen.storyboard */; };
+		6D4AEEB621886B490078BD34 /* parsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4AEEB521886B490078BD34 /* parsData.swift */; };
+		6D4AEEBA218880910078BD34 /* ShowCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4AEEB8218880830078BD34 /* ShowCollectionViewCell.swift */; };
+		6D4AEED42188D99F0078BD34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4AEED32188D99F0078BD34 /* AppDelegate.swift */; };
+		6D4AEEDB2188DA130078BD34 /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4AEEDA2188DA130078BD34 /* PersistenceManager.swift */; };
+		6D4AEEDD2188E0650078BD34 /* RepositoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4AEEDC2188E0650078BD34 /* RepositoryViewController.swift */; };
+		6D4AEEE2218902ED0078BD34 /* Repo+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4AEEE0218902ED0078BD34 /* Repo+CoreDataClass.swift */; };
+		6D4AEEE3218902ED0078BD34 /* Repo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4AEEE1218902ED0078BD34 /* Repo+CoreDataProperties.swift */; };
+		6DFDBCFF218A29AC003C9219 /* FavoriteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DFDBCFE218A29AC003C9219 /* FavoriteVC.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3607E86DE8E49BF2F510BC9F /* Pods-tz_Pocupon_Github.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tz_Pocupon_Github.debug.xcconfig"; path = "Pods/Target Support Files/Pods-tz_Pocupon_Github/Pods-tz_Pocupon_Github.debug.xcconfig"; sourceTree = "<group>"; };
+		6D4AEE99218850F50078BD34 /* tz_Pocupon_Github.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tz_Pocupon_Github.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D4AEE9E218850F50078BD34 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6D4AEEA1218850F50078BD34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6D4AEEA4218850F50078BD34 /* tz_Pocupon_Github.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = tz_Pocupon_Github.xcdatamodel; sourceTree = "<group>"; };
+		6D4AEEA6218850F50078BD34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6D4AEEA9218850F50078BD34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6D4AEEAB218850F50078BD34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6D4AEEB521886B490078BD34 /* parsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = parsData.swift; sourceTree = "<group>"; };
+		6D4AEEB8218880830078BD34 /* ShowCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowCollectionViewCell.swift; sourceTree = "<group>"; };
+		6D4AEED32188D99F0078BD34 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6D4AEEDA2188DA130078BD34 /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
+		6D4AEEDC2188E0650078BD34 /* RepositoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryViewController.swift; sourceTree = "<group>"; };
+		6D4AEEE0218902ED0078BD34 /* Repo+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Repo+CoreDataClass.swift"; sourceTree = "<group>"; };
+		6D4AEEE1218902ED0078BD34 /* Repo+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Repo+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		6DFDBCFE218A29AC003C9219 /* FavoriteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteVC.swift; sourceTree = "<group>"; };
+		798239EF4AEC815C2543E66A /* Pods_tz_Pocupon_Github.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tz_Pocupon_Github.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC3221AAB29110C4E76AE243 /* Pods-tz_Pocupon_Github.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tz_Pocupon_Github.release.xcconfig"; path = "Pods/Target Support Files/Pods-tz_Pocupon_Github/Pods-tz_Pocupon_Github.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6D4AEE96218850F50078BD34 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				443D06EDE5F5E36141505565 /* Pods_tz_Pocupon_Github.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0B5BE60327EFC01F626E6A8B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				798239EF4AEC815C2543E66A /* Pods_tz_Pocupon_Github.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		59122F0D076F8A034039AFCA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3607E86DE8E49BF2F510BC9F /* Pods-tz_Pocupon_Github.debug.xcconfig */,
+				AC3221AAB29110C4E76AE243 /* Pods-tz_Pocupon_Github.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6D4AEE90218850F40078BD34 = {
+			isa = PBXGroup;
+			children = (
+				6D4AEE9B218850F50078BD34 /* tz_Pocupon_Github */,
+				6D4AEE9A218850F50078BD34 /* Products */,
+				59122F0D076F8A034039AFCA /* Pods */,
+				0B5BE60327EFC01F626E6A8B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		6D4AEE9A218850F50078BD34 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6D4AEE99218850F50078BD34 /* tz_Pocupon_Github.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6D4AEE9B218850F50078BD34 /* tz_Pocupon_Github */ = {
+			isa = PBXGroup;
+			children = (
+				6D4AEED92188D9E90078BD34 /* CoreDataManager */,
+				6D4AEED32188D99F0078BD34 /* AppDelegate.swift */,
+				6D4AEEBB218880980078BD34 /* Cell */,
+				6D4AEEB92188808B0078BD34 /* Controller */,
+				6D4AEEB721886B540078BD34 /* parsData */,
+				6D4AEEA0218850F50078BD34 /* Main.storyboard */,
+				6D4AEEA6218850F50078BD34 /* Assets.xcassets */,
+				6D4AEEA8218850F50078BD34 /* LaunchScreen.storyboard */,
+				6D4AEEAB218850F50078BD34 /* Info.plist */,
+				6D4AEEA3218850F50078BD34 /* tz_Pocupon_Github.xcdatamodeld */,
+			);
+			path = tz_Pocupon_Github;
+			sourceTree = "<group>";
+		};
+		6D4AEEB721886B540078BD34 /* parsData */ = {
+			isa = PBXGroup;
+			children = (
+				6D4AEEB521886B490078BD34 /* parsData.swift */,
+			);
+			path = parsData;
+			sourceTree = "<group>";
+		};
+		6D4AEEB92188808B0078BD34 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6D4AEEDC2188E0650078BD34 /* RepositoryViewController.swift */,
+				6DFDBCFE218A29AC003C9219 /* FavoriteVC.swift */,
+				6D4AEE9E218850F50078BD34 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		6D4AEEBB218880980078BD34 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				6D4AEEB8218880830078BD34 /* ShowCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		6D4AEED92188D9E90078BD34 /* CoreDataManager */ = {
+			isa = PBXGroup;
+			children = (
+				6D4AEEE0218902ED0078BD34 /* Repo+CoreDataClass.swift */,
+				6D4AEEE1218902ED0078BD34 /* Repo+CoreDataProperties.swift */,
+				6D4AEEDA2188DA130078BD34 /* PersistenceManager.swift */,
+			);
+			path = CoreDataManager;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6D4AEE98218850F50078BD34 /* tz_Pocupon_Github */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6D4AEEAE218850F50078BD34 /* Build configuration list for PBXNativeTarget "tz_Pocupon_Github" */;
+			buildPhases = (
+				8902353BA04737D5C3A16BA7 /* [CP] Check Pods Manifest.lock */,
+				6D4AEE95218850F50078BD34 /* Sources */,
+				6D4AEE96218850F50078BD34 /* Frameworks */,
+				6D4AEE97218850F50078BD34 /* Resources */,
+				27B0ECFFE0FB5FEDECD08338 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = tz_Pocupon_Github;
+			productName = tz_Pocupon_Github;
+			productReference = 6D4AEE99218850F50078BD34 /* tz_Pocupon_Github.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6D4AEE91218850F40078BD34 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Ivan SELETSKYI";
+				TargetAttributes = {
+					6D4AEE98218850F50078BD34 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 6D4AEE94218850F40078BD34 /* Build configuration list for PBXProject "tz_Pocupon_Github" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6D4AEE90218850F40078BD34;
+			productRefGroup = 6D4AEE9A218850F50078BD34 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6D4AEE98218850F50078BD34 /* tz_Pocupon_Github */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6D4AEE97218850F50078BD34 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D4AEEAA218850F50078BD34 /* LaunchScreen.storyboard in Resources */,
+				6D4AEEA7218850F50078BD34 /* Assets.xcassets in Resources */,
+				6D4AEEA2218850F50078BD34 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		27B0ECFFE0FB5FEDECD08338 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-tz_Pocupon_Github/Pods-tz_Pocupon_Github-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-tz_Pocupon_Github/Pods-tz_Pocupon_Github-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8902353BA04737D5C3A16BA7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-tz_Pocupon_Github-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6D4AEE95218850F50078BD34 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D4AEE9F218850F50078BD34 /* ViewController.swift in Sources */,
+				6D4AEEE3218902ED0078BD34 /* Repo+CoreDataProperties.swift in Sources */,
+				6DFDBCFF218A29AC003C9219 /* FavoriteVC.swift in Sources */,
+				6D4AEEB621886B490078BD34 /* parsData.swift in Sources */,
+				6D4AEEDB2188DA130078BD34 /* PersistenceManager.swift in Sources */,
+				6D4AEEE2218902ED0078BD34 /* Repo+CoreDataClass.swift in Sources */,
+				6D4AEEDD2188E0650078BD34 /* RepositoryViewController.swift in Sources */,
+				6D4AEEA5218850F50078BD34 /* tz_Pocupon_Github.xcdatamodeld in Sources */,
+				6D4AEED42188D99F0078BD34 /* AppDelegate.swift in Sources */,
+				6D4AEEBA218880910078BD34 /* ShowCollectionViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		6D4AEEA0218850F50078BD34 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6D4AEEA1218850F50078BD34 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6D4AEEA8218850F50078BD34 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6D4AEEA9218850F50078BD34 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6D4AEEAC218850F50078BD34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6D4AEEAD218850F50078BD34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6D4AEEAF218850F50078BD34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3607E86DE8E49BF2F510BC9F /* Pods-tz_Pocupon_Github.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = tz_Pocupon_Github/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "iseletsk.tz-Pocupon-Github";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6D4AEEB0218850F50078BD34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AC3221AAB29110C4E76AE243 /* Pods-tz_Pocupon_Github.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = tz_Pocupon_Github/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "iseletsk.tz-Pocupon-Github";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6D4AEE94218850F40078BD34 /* Build configuration list for PBXProject "tz_Pocupon_Github" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6D4AEEAC218850F50078BD34 /* Debug */,
+				6D4AEEAD218850F50078BD34 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6D4AEEAE218850F50078BD34 /* Build configuration list for PBXNativeTarget "tz_Pocupon_Github" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6D4AEEAF218850F50078BD34 /* Debug */,
+				6D4AEEB0218850F50078BD34 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		6D4AEEA3218850F50078BD34 /* tz_Pocupon_Github.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				6D4AEEA4218850F50078BD34 /* tz_Pocupon_Github.xcdatamodel */,
+			);
+			currentVersion = 6D4AEEA4218850F50078BD34 /* tz_Pocupon_Github.xcdatamodel */;
+			path = tz_Pocupon_Github.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 6D4AEE91218850F40078BD34 /* Project object */;
+}
